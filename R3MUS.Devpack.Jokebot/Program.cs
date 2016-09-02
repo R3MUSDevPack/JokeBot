@@ -27,7 +27,7 @@ namespace R3MUS.Devpack.Jokebot
                     joketext = joketext.Split(new[] { "..." }, StringSplitOptions.RemoveEmptyEntries)[1];
                 }
 
-                joketext = string.Concat("@bodomatix: ", joketext.Replace("<br />", ""));
+                joketext = string.Concat(joketext.Replace("<br />", ""));
                 byteLength = ASCIIEncoding.ASCII.GetByteCount(joketext);
             }
             while (byteLength > 400);
